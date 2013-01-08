@@ -71,7 +71,7 @@ print "dumping results to shit.db"
 conn = sqlite3.connect("shit.db")
 c = conn.cursor()
 try:
-	c.execute("create table whois(name varchar(255), response blob);")
+	c.execute("create table whois(name varchar(255), response text);")
 	c.execute("create index whois_dns on whois(name);")
 except:
 	print "Oh good, it appears to already be created..."
