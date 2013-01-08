@@ -43,15 +43,10 @@ for i in range(150):
 	t.daemon = True
 	t.start()
 
-print "fetching names..."
-names = []
+print "enqueueing whois queries..."
 f = open("domains.txt","r")
 for line in f:
-	names.append( line.rstrip() )
-
-print "enqueueing whois queries..."
-for n in names:
-	q.put(n)
+	q.put( line.rstrip() )
 
 print "waiting on queue..."
 while True:
