@@ -1,0 +1,12 @@
+This is shithead. It does bulk whois lookups. It needs a version of PyWhois; either my fork [https://github.com/emf/pywhois] or the google version. whatever.
+
+you also need a socks proxy of some kind.  It doesn't matter, as long as it speaks socks.  This can be Tor, if you want to irritate the tor network and generally
+be a dick; or it can be a botnet of somekind, i guess, which means you're a special kind of dick, or you can rip out the socks logic (couple of lines) and
+get about 12 queries in before all the whois servers in the world ban your IP for a terms-of-service violation.   See, bulk whois is apparently only used by
+spammers and miscreants, otherwise you have to spend umpty-thousands of dollars to get a legitimate feed of this data.
+
+You're on your own. Don't run this tool. Don't be a dick.
+
+anyway, it takes a flatfile "domains.txt" of dns names.  it emits whois records in the simplest sqlite db you've ever seen.
+
+socks.py is http://socksipy.sourceforge.net/ by Dan Haim; not me. it just works great.
